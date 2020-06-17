@@ -261,6 +261,21 @@ void hapus(Node **root, int del)
               }
        }
 }
+int findMax(){
+	Node* curr = pohon;
+	while(curr->kanan!=NULL){
+		curr=curr->kanan;
+	}
+	return curr->data;
+}
+
+int findMin(){
+	Node* curr = pohon;
+	while(curr->kiri!=NULL){
+		curr=curr->kiri;
+	}
+	return curr->data;
+}
 
 int main()
 {
@@ -271,17 +286,19 @@ int main()
         system("cls"); 
         char data;
         printf("\n* PROGRAM BST *");
-        printf("\n=========================+");
-        printf("\nMENU                    ||\n");
-        printf("==========================\n");
-        printf("|| [1] Nambah Data      ||\n");
-        printf("|| [2] Lihat Pre-Order  ||\n");
-        printf("|| [3] Lihat In-Order   ||\n");
-        printf("|| [4] Lihat Post-Order ||\n");
-        printf("|| [5] Hapus            ||\n");
-        printf("|| [6] Kosongkan Data   ||\n");
-        printf("|| [7] Search           ||\n");
-        printf("=========================+\n");
+        printf("\n===============================+");
+        printf("\nMENU                          ||\n");
+        printf("===============================+\n");
+        printf("|| [1] Nambah Data            ||\n");
+        printf("|| [2] Lihat Pre-Order        ||\n");
+        printf("|| [3] Lihat In-Order         ||\n");
+        printf("|| [4] Lihat Post-Order       ||\n");
+        printf("|| [5] Hapus                  ||\n");
+        printf("|| [6] Kosongkan Data         ||\n");
+        printf("|| [7] Search                 ||\n");
+        printf("|| [8] Cari Bilangan Terbesar ||\n");
+        printf("|| [9] Cari Bilangan Terkecil ||\n");
+        printf("===============================+\n");
         printf("Pilih sesuai dengan yang kamu inginkan : ");
         scanf("%c",&pil);
         fflush(stdin); 
@@ -403,6 +420,15 @@ int main()
 
                      _getch();
                      break;
+                     
+            case '8':
+              		cout<<"\nBilangan terbesar dalam pohon adalah :"<<findMax();
+              		_getch();
+              		break;
+            case '9':
+              		cout<<"\nBilangan terkecil dalam pohon adalah :"<<findMin(); 
+					_getch(); 
+					break;   
               case 'X'|'x':
                      exit(0);
                      break;
