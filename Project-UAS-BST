@@ -33,7 +33,7 @@ void tambah (Node **root, int databaru)
         (*root) -> kiri = NULL;
         (*root) -> kanan = NULL;
         
-        printf("Data Berhasil ditambah...");
+        printf("Yeay data Berhasil ditambah...");
        }
 
     else if (databaru<(*root)->data)
@@ -96,7 +96,7 @@ void search(Node **root, int cari)
     else if(cari > (*root)->data)
         search(&(*root)->kanan,cari);
     else if(cari == (*root)->data)
-        printf("Data ditemukan!");
+        printf("Yeay Data ditemukan!");
 }
 
 int count(Node *root)
@@ -270,24 +270,25 @@ int main()
     {
         system("cls"); 
         char data;
-        printf("\t* PROGRAM BST *");
-        printf("\n\t==================");
-        printf("\nMENU");
-        printf("\n===============\n");
-        printf("[1] Tambah Data\n");
-        printf("[2] Lihat Pre-Order\n");
-        printf("[3] Lihat In-Order\n");
-        printf("[4] Lihat Post-Order\n");
-        printf("[5] Delete\n");
-        printf("[6] Kosongkan Data\n");
-        printf("[7] Search\n");
-        printf("Pilihan Anda : ");
+        printf("\n* PROGRAM BST *");
+        printf("\n=========================+");
+        printf("\nMENU                    ||\n");
+        printf("==========================\n");
+        printf("|| [1] Nambah Data      ||\n");
+        printf("|| [2] Lihat Pre-Order  ||\n");
+        printf("|| [3] Lihat In-Order   ||\n");
+        printf("|| [4] Lihat Post-Order ||\n");
+        printf("|| [5] Hapus            ||\n");
+        printf("|| [6] Kosongkan Data   ||\n");
+        printf("|| [7] Search           ||\n");
+        printf("=========================+\n");
+        printf("Pilih sesuai dengan yang kamu inginkan : ");
         scanf("%c",&pil);
         fflush(stdin); 
         switch(pil)
         {
             case '1':
-                     printf("\nINPUT : ");
+                     printf("\nMASUKAN : ");
                      printf("\n-------");
                      printf("\nMasukkan data: ");
                      scanf("%d", &data);
@@ -303,7 +304,7 @@ int main()
                      
                            preOrder(pohon);
                      else
-                           printf("Masih Kosong!!!");
+                           printf("Masih Kosong euy!!!");
                     
                      _getch();
                      break;
@@ -315,7 +316,7 @@ int main()
                      
                            inOrder(pohon);
                      else
-                           printf("Masih Kosong!!!");
+                           printf("Masih Kosong euy!!!");
                     
                      _getch();
                      break;
